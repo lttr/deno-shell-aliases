@@ -1,1 +1,1 @@
-export { evaluatedAliases, aliasesFromFile } from "./aliases.ts";
+export { aliasesFromFile, evaluatedAliases } from "./aliases.ts";
