@@ -46,7 +46,7 @@ This package is automatically [published](https://deno.land/x/shell_aliases) whe
 ```
 git describe --tags # get last tag
 git tag <version>
-git push
+git push --tags
 ```
 
 ## Second: NPM publishing
