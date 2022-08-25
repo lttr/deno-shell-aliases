@@ -26,7 +26,7 @@ await build({
     name: "@lttr/shell-aliases",
     version: Deno.args[0],
     description:
-      "Retrieve and parse zsh aliases from the environment or from a file.",
+      "Retrieve and parse zsh aliases from the environment or from a file",
     license: "MIT",
     repository: {
       type: "git",
