@@ -44,6 +44,7 @@ deno task test
 This package is automatically [published](https://deno.land/x/shell_aliases) when new tag with version is pushed to the Github repository.
 
 ```
+git describe --tags # get last tag
 git tag <version>
 git push
 ```
@@ -54,8 +55,9 @@ There is a build script that uses [dnt](https://deno.land/x/dnt) and compiles a
 npm package.
 
 ```
-deno run -A _build.ts $(git tag | head -n 1)
+deno run -A _build.ts <version>
 cd npm
 npm publish
+deno task clean
 ```
 
