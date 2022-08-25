@@ -1,0 +1,10 @@
+logformat='log --graph --abbrev-commit --decorate --format=format:"%C(yellow)%h%C(reset) %C(cyan)%ci%x08%x08%x08%x08%x08%x08%x08%x08%x08%C(reset) %s %C(green)(%an)%C(reset)%C(bold green)%d%C(reset)"'
+
+alias gm="git $logformat -n15"
+alias gcom="git switch `git_default_branch`"
+alias ezsh="$EDITOR ~/dotfiles/zshrc"
+alias ni="npm install"
+
+alias deps="cat package.json | json dependencies | json --items -a key value | sed 's/ /|/' | column -s '|' -t"
+
+
