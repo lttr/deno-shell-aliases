@@ -1,5 +1,5 @@
 {
- "tasks": {
+  "tasks": {
     "test": "deno test --allow-read mod_test.ts"
   }
 }
