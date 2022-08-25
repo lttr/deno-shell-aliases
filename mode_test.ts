@@ -1,7 +1,7 @@
 import { aliasesFromFile } from "./mod.ts";
 import { assertEquals, assertRejects } from "./deps.ts";
 
-const fixture = "fixture";
+const fixture = "./fixture";
 
 Deno.test("reads 5 lines of aliases", () => {
   aliasesFromFile(fixture).then((items) => {
