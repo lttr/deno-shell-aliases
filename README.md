@@ -57,7 +57,7 @@ npm package.
 ```
 deno run -A _build.ts <version>
 cd npm
-npm publish
+npm publish --access public
 deno task clean
 ```
 
