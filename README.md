@@ -45,6 +45,12 @@ const aliases = await evaluatedAliases();
 deno task test
 ```
 
+## Zero: JSR publishing
+
+Automatically using a Github Action to https://jsr.io/@lttr/shell-aliases
+
+Before publishing: Bumb version in `deno.json` and add git tag.
+
 ## First: Deno x publishing
 
 This package is automatically [published](https://deno.land/x/shell_aliases)

@@ -1,6 +1,6 @@
 {
   "name": "@lttr/shell-aliases",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Retrieve and parse zsh aliases from the environment or from a file",
   "exports": "./mod.ts",
   "tasks": {
