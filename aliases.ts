@@ -3,6 +3,11 @@ export interface Alias {
   value: string;
 }
 
+/**
+ * Retrieves a list of aliases from the current shell environment in a structured array.
+ *
+ * @returns A Promise that resolves to an array of Alias objects representing the evaluated aliases.
+ */
 export async function evaluatedAliases(): Promise<Alias[]> {
   const { success, output } = await command("zsh", [
     "--interactive",
@@ -15,6 +20,13 @@ export async function evaluatedAliases(): Promise<Alias[]> {
   return [];
 }
 
+/**
+ * Reads aliases declarations from a file and returns them in a structured array.
+ *
+ * @param filename - The name of the file to read aliases from.
+ * @returns A Promise that resolves to an array of Alias objects.
+ * @throws If there is an error reading the file or parsing the aliases.
+ */
 export async function aliasesFromFile(filename: string): Promise<Alias[]> {
   const lines = await readFileLines(filename);
   const filteredLines = lines.filter((line) => line.startsWith("alias")).map(

@@ -7,7 +7,10 @@ This package is written for `deno` and compiled for `node` using `dnt`.
 ## Usage (for deno)
 
 ```typescript
-import { evaluatedAliases, aliasesFromFile } from "https://deno.land/x/shell_aliases/mod.ts";
+import {
+  aliasesFromFile,
+  evaluatedAliases,
+} from "https://deno.land/x/shell_aliases/mod.ts";
 
 const aliases = await evaluatedAliases();
 // or
@@ -41,7 +44,8 @@ deno task test
 
 ## First: Deno x publishing
 
-This package is automatically [published](https://deno.land/x/shell_aliases) when new tag with version is pushed to the Github repository.
+This package is automatically [published](https://deno.land/x/shell_aliases)
+when new tag with version is pushed to the Github repository.
 
 ```
 git describe --tags # get last tag
@@ -60,4 +64,3 @@ cd npm
 npm publish --access public
 deno task clean
 ```
-
