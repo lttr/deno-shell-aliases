@@ -4,8 +4,7 @@ export interface Alias {
 }
 
 export async function evaluatedAliases(): Promise<Alias[]> {
-  const { success, output } = await command([
-    "zsh",
+  const { success, output } = await command("zsh", [
     "--interactive",
     "-c",
     "alias",
@@ -59,19 +58,17 @@ function parseAliases(rawAliases: string[]): Alias[] {
   }
 }
 
-async function command(params: string[]): Promise<{
+async function command(command: string, args: string[]): Promise<{
   success: boolean;
   code: number;
   output: string;
 }> {
-  const process = Deno.run({
-    cmd: params,
+  const process = new Deno.Command(command, {
+    args,
     stdout: "piped",
   });
-  const { success, code } = await process.status();
-  const stdout = await process.output();
+  const { success, stdout, code } = await process.output();
   const output = new TextDecoder().decode(stdout).trim();
-  process.close();
   return { success, code, output };
 }
 
