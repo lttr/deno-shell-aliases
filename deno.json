@@ -8,7 +8,14 @@
     "clean": "rm -rf npm/"
   },
   "publish": {
-    "include": ["mod.ts", "README.md", "LICENSE", "aliases.ts"]
+    "include": [
+      "LICENSE",
+      "README.md",
+      "aliases.ts",
+      "deno.json",
+      "deps.ts",
+      "mod.ts"
+    ]
   },
   "imports": {
     "@std/path": "jsr:@std/path@0.221.0",
