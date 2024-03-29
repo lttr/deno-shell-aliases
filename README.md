@@ -1,5 +1,8 @@
 # Zsh aliases
 
+[![JSR](https://jsr.io/badges/@<scope>/<package>)](https://jsr.io/@lttr/shell-aliases)
+[![JSR Score](https://jsr.io/badges/@<scope>/<package>/score)](https://jsr.io/@lttr/shell-aliases)
+
 Retrieve and parse zsh aliases from the environment or from a file.
 
 This package is written for `deno` and compiled for `node` using `dnt`.

@@ -1,3 +1,4 @@
+/** A shape of the values that are output from this module functions. */
 export interface Alias {
   key: string;
   value: string;
